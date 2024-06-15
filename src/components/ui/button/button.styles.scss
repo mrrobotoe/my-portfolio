@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #f1f1f1;
+  font-size: 1.05rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  transition: background-color 0.2s;
+
+  &:hover,
+  &[data-hovered] {
+    background-color: #464646;
+  }
+}

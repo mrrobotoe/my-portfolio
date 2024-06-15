@@ -1,0 +1,42 @@
+.auth_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  min-height: 100svh;
+  background-color: #fefefe;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  text-align: center;
+
+  .auth_layout__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .auth_layout__container {
+    min-width: 33rem;
+    .auth_layout__form {
+      width: 100%;
+    }
+  }
+
+  .icons {
+    font-size: 6rem;
+  }
+
+  .auth_layout__form {
+    border-radius: 0.3rem;
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+}

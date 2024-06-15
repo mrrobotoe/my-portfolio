@@ -1,0 +1,6 @@
+.app_container {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  grid-template-columns: fit-content 1fr;
+}

@@ -1,0 +1,23 @@
+.register_link_container {
+  align-self: flex-end;
+
+  .register_link_container__subtext {
+    font-size: 1rem;
+    margin-top: -1.4rem;
+  }
+
+  .register_link_container__link {
+    --register-link-color: rgb(39, 96, 252);
+    --register-link-hover-color: rgb(84, 129, 252);
+    text-decoration: none;
+    color: var(--register-link-color);
+    font-size: 1rem;
+    font-weight: 550;
+    letter-spacing: 0.8px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--register-link-hover-color);
+    }
+  }
+}
