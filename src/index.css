@@ -1,3 +1,6 @@
+html {
+  --box-shadow-outline: 0px 0px 0px 1px #333;
+}
 /*
   1. Use a more-intuitive box-sizing model.
 */
