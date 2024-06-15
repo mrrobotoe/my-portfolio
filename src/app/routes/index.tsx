@@ -1,7 +1,8 @@
 import { QueryClient } from '@tanstack/react-query';
 import { createBrowserRouter } from 'react-router-dom';
 
-export const createRouter = (queryClient: QueryClient) =>
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const createRouter = (_queryClient: QueryClient) =>
   createBrowserRouter([
     {
       path: '/',

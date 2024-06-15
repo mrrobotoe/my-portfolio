@@ -1,16 +1,10 @@
 import './spinner.styles.scss';
 
 export type SpinnerProps = {
-  size?: string;
-  variant?: string;
   className?: string;
 };
 
-export const Spinner = ({
-  size = 'md',
-  variant = 'primary',
-  className,
-}: SpinnerProps) => {
+export const Spinner = ({ className }: SpinnerProps) => {
   return (
     <>
       <svg
