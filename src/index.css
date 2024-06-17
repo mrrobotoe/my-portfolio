@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   --box-shadow-outline: 0px 0px 0px 1px #333;
 }
@@ -90,4 +94,126 @@ ol {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.mobile-navigation__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.312);
+  z-index: 100;
+  transition: all 300ms ease-out;
+
+  &.is-exiting-overlay {
+    transition: all 150ms ease-out;
+  }
+
+  .mobile-navigation__modal {
+    max-width: 20rem;
+    min-height: 100%;
+    transform: translateX(0%);
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    transition: transform 200ms ease-out;
+
+    &.is-entering {
+      transform: translateX(-100%);
+    }
+
+    &.is-exiting {
+    }
+
+    .mobile-navigation__dialog {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      outline: none;
+
+      .mobile-navigation__list {
+        background-color: #fff;
+        transition: transform 150ms ease-out;
+        width: 100%;
+        min-height: 100%;
+      }
+    }
+
+    .mobile-navigation__list__logo {
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 1.75rem;
+      padding-left: 0.575rem;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+
+      & > button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &[data-nav-expand='true'] {
+        }
+
+        &[data-hovered] {
+          background-color: #fff;
+        }
+
+        &[data-focused] {
+          outline: none;
+        }
+      }
+
+      & > button > i {
+        padding-bottom: 0.2rem;
+      }
+      & > button > span {
+        font-size: 1.2rem;
+      }
+    }
+
+    .mobile-navigation__list__links {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      gap: 1.35rem;
+      padding: 0.7rem;
+      font-size: 1.4rem;
+    }
+
+    .icons {
+      font-size: 1.3rem;
+    }
+
+    .mobile-navigation__list__links__link-btn {
+      margin: 0;
+      background: none;
+      border: none;
+      padding: 0.65rem;
+      border-radius: 7px;
+      color: #333;
+      line-height: 1.5;
+      display: flex;
+      width: 100%;
+      gap: 1rem;
+      align-items: center;
+
+      &:hover,
+      &[data-hovered] {
+        background-color: #efefef;
+      }
+
+      &[data-active-btn='true'] {
+        background-color: #eeeeee;
+        color: rgb(0, 136, 255);
+        background-color: rgba(67, 173, 254, 0.13);
+      }
+    }
+
+    .close-btn {
+      align-self: flex-end;
+      width: auto;
+      justify-content: flex-end;
+    }
+  }
 }

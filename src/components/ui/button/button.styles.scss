@@ -16,4 +16,14 @@
   &[data-hovered] {
     background-color: #464646;
   }
+
+  &\:inverted {
+    background-color:#f1f1f1;
+    color: #333;
+
+    &:hover,
+    &[data-hovered] {
+    background-color:#b6b6b6;
+    }
+  }
 }

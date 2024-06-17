@@ -1,0 +1,53 @@
+.mobile-navigation {
+  min-height: 3rem;
+  min-width: 3rem;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  transition: min-width 200ms ease;
+
+  .mobile-navigation__modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+
+    & .is-entering {
+      transition: all 150ms ease-in;
+    }
+
+    & .is-exiting {
+      transition: all 150ms ease-out;
+    }
+  }
+
+  .mobile-navigation__top-bar {
+    display: flex;
+    padding: 3px;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+
+    
+    & > * > button,
+    & > * > div {
+      margin: 0;
+      background: none;
+      border: none;
+      padding: 1rem;
+      font-size: 1.65rem;
+      border-radius: 7px;
+      color: #333;
+      line-height: 1;
+      display: flex;
+      width: 100%;
+    }
+
+
+  }
+  
+}
