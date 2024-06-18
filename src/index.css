@@ -97,6 +97,7 @@ ol {
 }
 
 .mobile-navigation__modal-overlay {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -105,6 +106,7 @@ ol {
   background-color: rgba(0, 0, 0, 0.312);
   z-index: 100;
   transition: all 300ms ease-out;
+  container-name: main;
 
   &.is-exiting-overlay {
     transition: all 150ms ease-out;
@@ -215,5 +217,14 @@ ol {
       width: auto;
       justify-content: flex-end;
     }
+
+      @container main (max-width: 500px) {
+        .dashboard-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+      }
+    }
   }
+
+  
 }

@@ -41,7 +41,6 @@ export const MobileNavigation = () => {
         className={[className, 'mobile-navigation__list__links__link-btn'].join(
           ' ',
         )}
-        // data-active-btn={active === 'logo'}
         onPress={() => state.toggle()}
       >
         {children}

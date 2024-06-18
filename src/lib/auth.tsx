@@ -1,3 +1,4 @@
+// @ts-ignore
 import { configureAuth } from 'react-query-auth';
 import { Navigate, useLocation } from 'react-router-dom';
 import { z } from 'zod';
@@ -21,8 +22,7 @@ const authConfig = {
   logoutFn: () => null,
 };
 
-const { useUser, useLogin, useLogout, useRegister, AuthLoader } =
-  configureAuth(authConfig);
+configureAuth(authConfig);
 
 export const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const user = true;

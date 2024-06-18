@@ -4,6 +4,7 @@
   border-right: 1px solid #e0e0e0;
   display: flex;
   transition: min-width 200ms ease;
+  container-name: main;
 
   .mobile-navigation__modal-overlay {
     position: fixed;
@@ -31,7 +32,6 @@
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
     border-top: 1px solid #e0e0e0;
-
     
     & > * > button,
     & > * > div {
@@ -46,8 +46,6 @@
       display: flex;
       width: 100%;
     }
-
-
   }
-  
+
 }
